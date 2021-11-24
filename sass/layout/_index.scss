@@ -1,0 +1,10 @@
+// Hver boks der styles. Der skal også være grid
+
+@use "orders"; // ordrer
+@use "favorites"; // favoritter
+@use "sales"; // omsætning/dagen i tal
+@use "staff"; //medarbejdere
+@use "kegs"; // forstage
+@use "storage"; // lager
+
+@use "grid";
