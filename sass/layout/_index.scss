@@ -1,10 +1,10 @@
 // Hver boks der styles. Der skal også være grid
 
-@use "orders"; // ordrer
-@use "favorites"; // favoritter
-@use "sales"; // omsætning/dagen i tal
-@use "staff"; //medarbejdere
-@use "kegs"; // forstage
-@use "storage"; // lager
+@forward "orders"; // ordrer
+@forward "favorites"; // favoritter
+@forward "sales"; // omsætning/dagen i tal
+@forward "staff"; //medarbejdere
+@forward "kegs"; // forstage
+@forward "storage"; // lager
 
-@use "grid";
+@forward "grid";
