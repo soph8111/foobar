@@ -1,0 +1,44 @@
+/* MOBILVERSION */
+
+#orders {
+  grid-area: orders;
+}
+
+#favorites {
+  grid-area: favorites;
+}
+
+#staff {
+  grid-area: staff;
+}
+
+#kegs {
+  grid-area: kegs;
+}
+
+#storage {
+  grid-area: storage;
+}
+
+#sales {
+  grid-area: sales;
+}
+
+/* TABLET */
+
+/* DESKTOP */
+
+@media (min-width: 1080px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "orders favorites staff"
+      "orders favorites staff"
+      "orders kegs kegs"
+      "sales kegs kegs"
+      "sales storage storage"
+      "sales storage storage";
+  }
+}
