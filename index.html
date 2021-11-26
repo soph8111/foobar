@@ -7,7 +7,6 @@
     <title>Vite App</title>
   </head>
   <body>
-
     <main>
       <fieldset id="orders">
         <legend>Ordrer</legend>
@@ -19,6 +18,14 @@
 
       <fieldset id="staff">
         <legend>Medarbejdere</legend>
+        <template>
+          <article>
+            <img src="" alt="" />
+            <h3 class="name"></h3>
+            <h3 class="statusDetail"></h3>
+            <h3 class="servingCustomer"></h3>
+          </article>
+        </template>
       </fieldset>
 
       <fieldset id="kegs">
@@ -32,9 +39,7 @@
       <fieldset id="sales">
         <legend>Dagen i tal</legend>
       </fieldset>
-      
     </main>
-
 
     <script type="module" src="/main.js"></script>
   </body>
