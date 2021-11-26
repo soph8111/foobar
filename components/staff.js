@@ -1,5 +1,6 @@
+"use strict";
 export function showStaff(foobarData) {
-    console.log(foobarData);
+    // console.log(foobarData);
     const staffHolder = document.querySelector("#staff_wrapper");
     const template = document.querySelector(".staff_content").content;
     //   staffHolder.textContent = "";
