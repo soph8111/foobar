@@ -1,4 +1,6 @@
 import "./style.scss";
+import { showStaff } from "./components/staff.js"
+import { showOrders } from "./components/queue.js"
 
 window.addEventListener("DOMContentLoaded", start);
 
@@ -17,18 +19,7 @@ async function laodJSON() {
   console.log("foobarData", foobarData);
 
   showStaff(foobarData.bartenders);
+  showOrders(foobarData.queue);
 }
 
-function showStaff(foobarData) {
-  console.log(foobarData);
-  const staffHolder = document.querySelector(".show-staff");
-  const template = document.querySelector("template").content;
-  //   staffHolder.textContent = "";
-  foobarData.forEach((bartenders) => {
-    const klon = template.cloneNode(true);
-    klon.querySelector(".name").textContent = bartenders.name;
-    klon.querySelector(".statusDetail").textContent = bartenders.statusDetail;
-    klon.querySelector(".servingCustomer").textContent = bartenders.servingCustomer;
-    staffHolder.appendChild(klon);
-  });
-}
+

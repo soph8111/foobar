@@ -4,42 +4,130 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.scss">
     <title>Vite App</title>
   </head>
   <body>
     <main>
       <fieldset id="orders">
-        <legend>Ordrer</legend>
+        <legend>Orders</legend>
+        <p class="queue">In queue: 0</p>
+        <div id="orders_wrapper"></div>
       </fieldset>
 
       <fieldset id="favorites">
-        <legend>Dagens favoritter</legend>
+        <legend>Favourites</legend>
+        <div id="fav_wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="332.201" height="293.5" viewBox="0 0 332.201 293.5">
+            <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(8.101 56)" fill="none" stroke="#000" stroke-width="4">
+              <ellipse cx="45.5" cy="56" rx="45.5" ry="56" stroke="none"/>
+              <ellipse cx="45.5" cy="56" rx="43.5" ry="54" fill="none"/>
+            </g>
+            <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(124.101)" fill="none" stroke="#000" stroke-width="4">
+              <ellipse cx="45.5" cy="56" rx="45.5" ry="56" stroke="none"/>
+              <ellipse cx="45.5" cy="56" rx="43.5" ry="54" fill="none"/>
+            </g>
+            <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(237.101 92)" fill="none" stroke="#000" stroke-width="4">
+              <ellipse cx="45.5" cy="56" rx="45.5" ry="56" stroke="none"/>
+              <ellipse cx="45.5" cy="56" rx="43.5" ry="54" fill="none"/>
+            </g>
+            <g id="Group_166" data-name="Group 166" transform="translate(-790.899 -119)">
+              <g id="Icon_ionic-md-podium" data-name="Icon ionic-md-podium" transform="translate(788.649 240.595)">
+                <path id="Path_7" data-name="Path 7" d="M2.25,15.75H121.289v99.333H2.25Z" transform="translate(0 42.917)" fill="#112026"/>
+                <path id="Path_8" data-name="Path 8" d="M13.5,9H132.767V158H13.5Z" transform="translate(96.483)" fill="#112026"/>
+                <path id="Path_9" data-name="Path 9" d="M24.75,20.25H171.3V86.472H24.75Z" transform="translate(163.156 71.528)" fill="#112026"/>
+              </g>
+              <text id="_1" data-name="1" transform="translate(947 294.5)" fill="#d4af37" font-size="50" font-family="DevanagariMT, Devanagari MT" letter-spacing="0.04em"><tspan x="0" y="0">1</tspan></text>
+              <text id="_2" data-name="2" transform="translate(835.5 346)" fill="#d4af37" font-size="50" font-family="DevanagariMT, Devanagari MT" letter-spacing="0.04em"><tspan x="0" y="0">2</tspan></text>
+              <text id="_3" data-name="3" transform="translate(1059.5 332.5)" fill="#d4af37" font-size="50" font-family="DevanagariMT, Devanagari MT" letter-spacing="0.04em"><tspan x="0" y="46">3</tspan></text>
+            </g>
+          </svg>          
+        </div>
       </fieldset>
 
       <fieldset id="staff">
-        <legend>Medarbejdere</legend>
-        <template>
-          <article>
-            <img src="" alt="" />
-            <h3 class="name"></h3>
-            <h3 class="statusDetail"></h3>
-            <h3 class="servingCustomer"></h3>
-          </article>
-        </template>
+        <legend>Staff</legend>
+        <p>Bartender:</p>
+        <p>Status:</p>
+        <p>Preparing order:</p>
+        <div id="staff_wrapper"></div>
       </fieldset>
 
-      <fieldset id="kegs">
-        <legend>Fustager</legend>
+      <fieldset id="taps">
+        <legend>Taps</legend>
+        <div id="taps_wrapper"></div>
       </fieldset>
 
       <fieldset id="storage">
-        <legend>Lager</legend>
+        <legend>Storage</legend>
+        <div id="storage_wrapper"></div>
       </fieldset>
 
       <fieldset id="sales">
-        <legend>Dagen i tal</legend>
+        <legend>Sales</legend>
+        <div id="sales_wrapper">
+          <div id="customer_served">
+            <p id="customer_amount"></p>
+            <img class="sales_img" src="" alt="">
+            <p>Customers served</p>
+          </div>
+          <div id="beers_sold">
+            <p id="beers_amount"></p>
+            <img class="sales_img" src="" alt="">
+            <p>Beers sold</p>
+          </div>
+          <div id="money_earned">
+            <p id="money_amount"></p>
+            <img class="sales_img" src="" alt="">
+            <p>In revenue</p>
+          </div>
+        </div>
       </fieldset>
     </main>
+
+    <!-- Templates -->
+
+    <!-- Orders -->
+    <template class="orders_content">
+      <article>
+        <p class="order_no"></p>
+        <ul class="order_beers"></ul>
+      </article>
+    </template>
+
+    <!-- Staff -->
+    <template class="staff_content">
+      <article >
+        <img class="staff_img" src="" alt="">
+        <p class="name"></p>
+        <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+          <circle class="ready" id="Ellipse_20" data-name="Ellipse 20" cx="6" cy="6" r="6" fill="#a21b1b"/>
+        </svg>        
+        <p class="status"></p>
+        <p class="serving_no"></p>
+      </article>
+    </template>
+
+    <!-- Taps -->
+    <template class="taps_content">
+      <article>
+        <p class="tap_no"></p>
+        <!-- SKAL ÆNDRES -->
+        <img src="" alt=""> 
+        <p class="beer_name"></p>
+        <p class="alcohol"></p>
+        <p class="beer_type"></p>
+      </article>
+    </template>
+
+    <!-- Storage -->
+    <template class="storage_content">
+      <article>
+        <p class="storage_name"></p>
+        <img class="storage_img" src="" alt="">
+        <p class="storage_amount"></p>
+      </article>
+    </template>
 
     <script type="module" src="/main.js"></script>
   </body>
