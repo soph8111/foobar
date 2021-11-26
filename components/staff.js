@@ -3,7 +3,7 @@ export function showStaff(foobarData) {
     // console.log(foobarData);
     const staffHolder = document.querySelector("#staff_wrapper");
     const template = document.querySelector(".staff_content").content;
-    //   staffHolder.textContent = "";
+    staffHolder.textContent = "";
     foobarData.forEach((bartenders) => {
       const klon = template.cloneNode(true);
       klon.querySelector(".name").textContent = bartenders.name;
