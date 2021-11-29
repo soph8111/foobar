@@ -7,6 +7,7 @@ export function showStaff(foobarData) {
     foobarData.forEach((bartenders) => {
       const klon = template.cloneNode(true);
       klon.querySelector(".name").textContent = bartenders.name;
+      klon.querySelector(".staff_img").src = `./images/${bartenders.name}.png`;
       klon.querySelector(".ready").style.fill = readyOrNot(bartenders.status);
       klon.querySelector(".status").textContent = bartenders.statusDetail;
       klon.querySelector(".serving_no").textContent = bartenders.servingCustomer;
@@ -26,3 +27,4 @@ export function showStaff(foobarData) {
 
 
   // Billeder på bartendere
+  // Lav mappe med billeder - giv dem navn efter bartenders navn - sæt billede ind ligesom i hogwarts url(`./images/${bartenders.name}.png`)

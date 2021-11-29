@@ -25,7 +25,7 @@ async function laodJSON() {
   // console.log("foobarData", foobarData);
 
   showOrders(foobarData.queue);
-  showFav(foobarData.serving);
+  // showFav(foobarData.serving);
   showStaff(foobarData.bartenders);
   // showTaps(foobarData.taps);
   showStorage(foobarData.storage);

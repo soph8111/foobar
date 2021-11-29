@@ -9,7 +9,7 @@ export function showOrders(foobarData){
       const klon = template.cloneNode(true);
       // console.log(order);
       klon.querySelector(".order_no").textContent = order.id;
-      klon.querySelector(".order_beers").textContent = order.order
+      klon.querySelector(".order_beers").textContent = order.order;
       ordersHolder.appendChild(klon);
     });
 }
