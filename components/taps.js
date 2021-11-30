@@ -1,8 +1,6 @@
 "use strict";
 
 export function showTaps(foobarData, beerData) {
-    console.log(foobarData);
-    console.log(beerData);
     const tapsHolder = document.querySelector("#taps_wrapper");
     const template = document.querySelector(".taps_content").content;
     tapsHolder.textContent = "";
@@ -42,6 +40,5 @@ function getType(beerData, tap){
 }
  
 function getPercentage(tap){
-    console.log(tap.level);
     return (100 * tap.level) / tap.capacity;
 }
