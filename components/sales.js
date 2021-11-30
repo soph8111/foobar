@@ -3,7 +3,7 @@
 export function showSales(foobarData){
     // console.log(foobarData);
     document.querySelector("#customer_amount").textContent = calculateCustomers(foobarData);
-    document.querySelector("#beers_amount").textContent = calculateBeers(foobarData); //UDSKRIVER IKKE????
+    document.querySelector("#beers_amount").textContent = calculateBeers(foobarData);
     document.querySelector("#money_amount").textContent = calculateMoney(foobarData);
 }
 
@@ -16,11 +16,11 @@ const customerCount = {
         
         //Sørger for kun at tælle customer 1 gang - hvis samme kunde stadig bliver serviceret når det fetches igen)
         if(!customerCount.customerArray.includes(customer.id)){
-            // calculateBeers(customer);
+            // Pusher customer id'et til arrayet, så vi kan tælle længden på arrayet og få antallet af kunder
             customerCount.customerArray.push(customer.id);
-            // console.log(customerCount.customerArray);
         }   
     });
+    // Retunerer længden af arrayet, som så bliver udskrevet i showSales
     return customerCount.customerArray.length;
 }
 
