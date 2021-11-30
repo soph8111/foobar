@@ -5,6 +5,7 @@ export function showStaff(foobarData) {
     const template = document.querySelector(".staff_content").content;
     staffHolder.textContent = "";
     foobarData.forEach((bartenders) => {
+      //Måske sætte if (status=== WORKING) så udskrive nedenstående??
       const klon = template.cloneNode(true);
       klon.querySelector(".name").textContent = bartenders.name;
       klon.querySelector(".staff_img").src = `./images/${bartenders.name}.png`;

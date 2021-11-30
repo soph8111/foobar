@@ -1,33 +1,49 @@
 "use strict";
 
-export function showSales(amount, foobarData){
+export function showSales(foobarData){
     // console.log(foobarData);
-
-    document.querySelector("#customer_amount").textContent = calculateCustomer(amount, foobarData);
-    document.querySelector("#beers_amount").textContent = calculateBeers(amount, foobarData);
-    document.querySelector("#beers_amount").textContent = calculateMoney(amount, foobarData);
+    document.querySelector("#customer_amount").textContent = calculateCustomers(foobarData);
+    document.querySelector("#beers_amount").textContent = calculateBeers(foobarData); //UDSKRIVER IKKE????
+    document.querySelector("#money_amount").textContent = calculateMoney(foobarData);
 }
 
-// HELP
-function calculateCustomer(amount, customers){
-    // console.log(customers);
-    amount.push(customers);
-    // const totalCustomers = amount.concat(customers);
-        const totalCustomers = amount.concat(customers);
-    // amount = totalCustomers;
-    // const test = amount.concat(customers)
-    // console.log(totalCustomers);
-    return totalCustomers.length;
+const customerCount = {
+    customerArray: [],
+};
+
+  function calculateCustomers(customers){
+    customers.forEach((customer) => {
+        
+        //Sørger for kun at tælle customer 1 gang - hvis samme kunde stadig bliver serviceret når det fetches igen)
+        if(!customerCount.customerArray.includes(customer.id)){
+            // calculateBeers(customer);
+            customerCount.customerArray.push(customer.id);
+            // console.log(customerCount.customerArray);
+        }   
+    });
+    return customerCount.customerArray.length;
 }
 
-function calculateBeers(amount, customers){}
+const beerCount = {
+    beerArray: [],
+};
 
-function calculateMoney(amount, customers){}
+function calculateBeers(customers){
 
+    console.log(customers);
+    customers.forEach((customer) => {
+        if (!beerCount.beerArray.includes(customer.id)){
+            // console.log(customer.order);
+        beerCount.beerArray.push(...customer.order);
+        // console.log(beerCount.beerArray);
+        }
+    });
+    
+    // console.log(beerCount.beerArray.length);
+    return beerCount.beerArray.length;
+}
 
-// const array1 = ['a', 'b', 'c'];
-// const array2 = ['d', 'e', 'f'];
-// const array3 = array1.concat(array2);
-
-// console.log(array3);
-// expected output: Array ["a", "b", "c", "d", "e", "f"]
+function calculateMoney(customers){
+    // console.log(beerCount.beerArray);
+    return beerCount.beerArray.length * 50;
+}

@@ -7,18 +7,18 @@ import {showSales} from "./components/sales.js";
 
 window.addEventListener("DOMContentLoaded", start);
 
-const amount = [];
+
 
 // let beertypesUrl = "https://the-three-must-get-beers.herokuapp.com/beertypes";
 
 function start() {
   // console.log("start");
-  laodJSON();
-  // setInterval(laodJSON, 5000);
+  loadJSON();
+  setInterval(loadJSON, 50000);
 }
 
 let foobarUrl = "https://the-three-must-get-beers.herokuapp.com/";
-async function laodJSON() {
+async function loadJSON() {
   //   console.log("laodJSON");
   const response = await fetch(foobarUrl);
   const foobarData = await response.json();
@@ -29,7 +29,7 @@ async function laodJSON() {
   showStaff(foobarData.bartenders);
   // showTaps(foobarData.taps);
   showStorage(foobarData.storage);
-  showSales(amount, foobarData.serving);
+  showSales(foobarData.serving);
 }
 
 
