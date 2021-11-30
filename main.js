@@ -1,34 +1,35 @@
-import "./style.scss";
+"use strict";
+// import "./style.scss";
+import { showStaff } from "./components/staff.js";
+import { showOrders } from "./components/queue.js";
+import {showStorage} from "./components/storage.js";
+import {showSales} from "./components/sales.js";
 
 window.addEventListener("DOMContentLoaded", start);
+
+
 
 // let beertypesUrl = "https://the-three-must-get-beers.herokuapp.com/beertypes";
 
 function start() {
-  console.log("start");
-  laodJSON();
+  // console.log("start");
+  loadJSON();
+  setInterval(loadJSON, 50000);
 }
 
 let foobarUrl = "https://the-three-must-get-beers.herokuapp.com/";
-async function laodJSON() {
+async function loadJSON() {
   //   console.log("laodJSON");
   const response = await fetch(foobarUrl);
   const foobarData = await response.json();
-  console.log("foobarData", foobarData);
+  // console.log("foobarData", foobarData);
 
+  showOrders(foobarData.queue);
+  // showFav(foobarData.serving);
   showStaff(foobarData.bartenders);
+  // showTaps(foobarData.taps);
+  showStorage(foobarData.storage);
+  showSales(foobarData.serving);
 }
 
-function showStaff(foobarData) {
-  console.log(foobarData);
-  const staffHolder = document.querySelector(".show-staff");
-  const template = document.querySelector("template").content;
-  //   staffHolder.textContent = "";
-  foobarData.forEach((bartenders) => {
-    const klon = template.cloneNode(true);
-    klon.querySelector(".name").textContent = bartenders.name;
-    klon.querySelector(".statusDetail").textContent = bartenders.statusDetail;
-    klon.querySelector(".servingCustomer").textContent = bartenders.servingCustomer;
-    staffHolder.appendChild(klon);
-  });
-}
+
