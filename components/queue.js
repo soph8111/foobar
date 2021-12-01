@@ -8,7 +8,7 @@ export function showOrders(foobarData) {
   foobarData.forEach((order) => {
     const klon = template.cloneNode(true);
     klon.querySelector(".order_no").textContent =`#${order.id}`;
-    console.log(order.id);
+    // console.log(order.id);
     const list = createBeerList(order.order);
     klon.querySelector(".order_beers").append(list);
 
@@ -45,7 +45,7 @@ export function showOrders(foobarData) {
 function createBeerList(beersOnOrder) {
   let list = document.createElement("ul");
 
-  console.log(beersOnOrder);
+  // console.log(beersOnOrder);
   const moreThanOne = [];
 
   beersOnOrder.forEach((beer) => {
