@@ -1,14 +1,15 @@
 "use strict";
 
 export function showSales(foobarData){
-    // console.log(foobarData);
     document.querySelector("#customer_amount").textContent = calculateCustomers(foobarData);
-    document.querySelector("#beers_amount").textContent = calculateBeers(foobarData);
-    document.querySelector("#money_amount").textContent = calculateMoney(foobarData);
+    document.querySelector("#beers_amount").textContent = customerCount.beerCount;
+    document.querySelector("#money_amount").textContent = calculateMoney();
 }
 
+// Tomt array til at tælle kunder og øl
 const customerCount = {
     customerArray: [],
+    beerCount: 0,
 };
 
   function calculateCustomers(customers){
@@ -18,32 +19,20 @@ const customerCount = {
         if(!customerCount.customerArray.includes(customer.id)){
             // Pusher customer id'et til arrayet, så vi kan tælle længden på arrayet og få antallet af kunder
             customerCount.customerArray.push(customer.id);
-        }   
+            // Sætter tælleren på øl til at være lig tallet før + længden af ordrerne
+            customerCount.beerCount = customerCount.beerCount + customer.order.length;
+        }
     });
-    // Retunerer længden af arrayet, som så bliver udskrevet i showSales
+    // Returnerer længden af arrayet, som så bliver udskrevet i showSales
     return customerCount.customerArray.length;
 }
 
-const beerCount = {
-    beerArray: [],
-};
+// function calculateBeers(){
+//     return customerCount.beerCount;
+// }
 
-function calculateBeers(customers){
 
-    console.log(customers);
-    customers.forEach((customer) => {
-        if (!beerCount.beerArray.includes(customer.id)){
-            // console.log(customer.order);
-        beerCount.beerArray.push(...customer.order);
-        // console.log(beerCount.beerArray);
-        }
-    });
-    
-    // console.log(beerCount.beerArray.length);
-    return beerCount.beerArray.length;
-}
-
-function calculateMoney(customers){
-    // console.log(beerCount.beerArray);
-    return beerCount.beerArray.length * 50;
+function calculateMoney(){
+    // Ganger antallet af øl med 50 (pris pr øl)
+    return customerCount.beerCount * 50;
 }
