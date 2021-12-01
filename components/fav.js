@@ -21,8 +21,11 @@ export function showFav(foobarData){
 
     calculateBeers(foobarData);
     document.querySelector("#number1").textContent = sorted[0].name;
+    document.querySelector("#img1 image").setAttribute("href", `./images/${changeName(sorted[0].name)}.png`);
     document.querySelector("#number2").textContent = sorted[1].name;
+    document.querySelector("#img2 image").setAttribute("href", `./images/${changeName(sorted[1].name)}.png`);
     document.querySelector("#number3").textContent = sorted[2].name;
+    document.querySelector("#img3 image").setAttribute("href", `./images/${changeName(sorted[2].name)}.png`);
 }
 
 function calculateBeers(foobarData){
@@ -34,7 +37,7 @@ function calculateBeers(foobarData){
             // Pusher customer id'et til arrayet, så vi kan tjekke at ordren ikke har været kørt før
             orderArray.push(order.id);
             // Sætter tælleren på øllen til at være lig tallet før + længden af array med samme øl i
-            console.log(order.order);
+            // console.log(order.order);
             if(order.order.includes("GitHop")){
                 beerCount[0].amount+= order.order.filter(order => order == "GitHop").length;
             };
@@ -66,8 +69,8 @@ function calculateBeers(foobarData){
                 beerCount[9].amount+= order.order.filter(order => order == "Ruined Childhood").length;
             };
         }
-        // console.log(beerCount);
-        // console.log(sorted);
+        console.log(beerCount);
+        console.log(sorted);
         // Kalder functionen sort by
         sortBy();
 
@@ -83,6 +86,11 @@ function sortBy(){
     });
 }
 
+function changeName(name){
+   let newName = name.split(" ");
+    newName = newName.join("");
+    return newName.toLowerCase();
+}
 
 
 
