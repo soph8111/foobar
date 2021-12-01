@@ -7,7 +7,8 @@ export function showOrders(foobarData) {
   ordersHolder.textContent = "";
   foobarData.forEach((order) => {
     const klon = template.cloneNode(true);
-    klon.querySelector(".order_no").textContent = order.id;
+    klon.querySelector(".order_no").textContent =`#${order.id}`;
+    console.log(order.id);
     const list = createBeerList(order.order);
     klon.querySelector(".order_beers").append(list);
 

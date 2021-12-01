@@ -5,17 +5,15 @@ export function showStaff(foobarData) {
     const template = document.querySelector(".staff_content").content;
     staffHolder.textContent = "";
     foobarData.forEach((bartenders) => {
-      //Måske sætte if (status=== WORKING) så udskrive nedenstående??
       const klon = template.cloneNode(true);
       klon.querySelector(".name").textContent = bartenders.name;
       klon.querySelector(".staff_img").src = `./images/${bartenders.name}.png`;
       klon.querySelector(".ready").style.fill = readyOrNot(bartenders.status);
-      klon.querySelector(".status").textContent = bartenders.statusDetail;
-      klon.querySelector(".serving_no").textContent = bartenders.servingCustomer;
+      klon.querySelector(".status").textContent = getStatus(bartenders.statusDetail);
+      klon.querySelector(".serving_no").textContent = getOrderNo(bartenders.servingCustomer);
       staffHolder.appendChild(klon);
     });
   }
-
 
   // Ændre farven til grøn hvis bartender er READY
   function readyOrNot(status){
@@ -26,6 +24,37 @@ export function showStaff(foobarData) {
     return status;
   }
 
+  // Udskriver status.detail som rigtig tekst
+  function getStatus(status){
+    if(status === "pourBeer"){
+      return "Pouring beer";
+    }
+    else if(status === "waiting"){
+      return "Available"
+    }
+    else if(status === "replaceKeg"){
+      return "Replacing keg"
+    }
+    else if(status === "releaseTap"){
+      return "Releasing tap"
+    }
+    else if(status === "reserveTap"){
+      return "Reserving tap"
+    }
+    else if(status === "startServing"){
+      return "Starting to serve"
+    }
+    else if(status === "startServing"){
+      return "Starting to serve"
+    }
+    else if(status === "receivePayment"){
+      return "Receiving payment"
+    }
+  }
 
-  // Billeder på bartendere
-  // Lav mappe med billeder - giv dem navn efter bartenders navn - sæt billede ind ligesom i hogwarts url(`./images/${bartenders.name}.png`)
+  //Sørger for der ikke bliver udskrevet ordrer nummer når der ikke er en kunde (så der ikke står #null)
+  function getOrderNo(id){
+    if (id != null){
+      return `#${id}`;
+    }
+  }

@@ -34,7 +34,7 @@ function calculateBeers(foobarData){
             // Pusher customer id'et til arrayet, så vi kan tjekke at ordren ikke har været kørt før
             orderArray.push(order.id);
             // Sætter tælleren på øllen til at være lig tallet før + længden af array med samme øl i
-            console.log(order.order);
+            // console.log(order.order);
             if(order.order.includes("GitHop")){
                 beerCount[0].amount+= order.order.filter(order => order == "GitHop").length;
             };
