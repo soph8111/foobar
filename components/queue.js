@@ -7,7 +7,7 @@ export function showOrders(foobarData) {
   ordersHolder.textContent = "";
   foobarData.forEach((order) => {
     const klon = template.cloneNode(true);
-    klon.querySelector(".order_no").textContent =`#${order.id}`;
+    klon.querySelector(".order_no").textContent = `#${order.id}`;
     // console.log(order.id);
     const list = createBeerList(order.order);
     klon.querySelector(".order_beers").append(list);
@@ -42,7 +42,9 @@ export function showOrders(foobarData) {
   return list;
 } */
 
-function createBeerList(beersOnOrder) {
+// TEST
+
+/* function createBeerList(beersOnOrder) {
   let list = document.createElement("ul");
 
   // console.log(beersOnOrder);
@@ -84,6 +86,51 @@ function countNumbersOfBeers(array, whatBeer) {
   }
 
   return count;
+} */
+
+//TEST IGEN
+
+function createBeerList(beersOnOrder) {
+  let list = document.createElement("ul");
+
+  console.log(beersOnOrder);
+
+  const newArray = [];
+  const moreThanOne = [];
+
+  beersOnOrder.forEach((beer) => {
+    const numbersOfBeers = countNumbersOfBeers(beersOnOrder, beer);
+    if (numbersOfBeers.includes("1")) {
+      newArray.push(numbersOfBeers);
+    } else if (!numbersOfBeers.includes("1")) {
+      moreThanOne.push(numbersOfBeers);
+    }
+  });
+
+  if (moreThanOne.length > 0) {
+    newArray.push(moreThanOne[moreThanOne.length - 1]);
+  }
+
+  newArray.forEach((beer) => {
+    const li = document.createElement("li");
+
+    li.append(beer);
+    list.append(li);
+  });
+
+  return list;
+}
+
+function countNumbersOfBeers(array, whatBeer) {
+  let count = 0;
+  const hej = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === whatBeer) {
+      count++;
+    }
+  }
+
+  return `${count}x ${whatBeer}`;
 }
 
 // Sætte 1x, 2x osv foran ordren alt efter antal af samme slags øl

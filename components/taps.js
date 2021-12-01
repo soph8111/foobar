@@ -12,7 +12,7 @@ export function showTaps(foobarData, beerData) {
     klon.querySelector(".level").textContent = `${percentage}%`;
     klon.querySelector(".alcohol").textContent = getAlcohol(beerData, tap);
     klon.querySelector(".beer_type").textContent = getType(beerData, tap);
-    klon.querySelector(".donut-segment").setAttribute("stroke-dasharray", setStrokeDash(percentage));
+    klon.querySelector(".donut-segment").setAttribute("stroke-dasharray", setStrokeDash(percentage, tap));
     klon.querySelector(".donut-segment").setAttribute("stroke", setColor(percentage));
     tapsHolder.appendChild(klon);
   });
@@ -41,6 +41,7 @@ function getType(beerData, tap) {
 }
 
 /* DONUT CHART */
+// Inspired by: https://codepen.io/janverstr/pen/PvPoaV
 
 function getPercentage(tap) {
   const percentage = (100 * tap.level) / tap.capacity;
@@ -48,7 +49,7 @@ function getPercentage(tap) {
   return percentage;
 }
 
-function setStrokeDash(percentage) {
+function setStrokeDash(percentage, tap) {
   const colored = percentage;
   const notColored = 100 - percentage;
 
@@ -57,9 +58,9 @@ function setStrokeDash(percentage) {
 
 function setColor(percentage) {
   let color = "green";
-  if (percentage > 33.33 && percentage < 66.6) {
+  if (percentage > 20 && percentage < 65) {
     color = "orange";
-  } else if (percentage < 33.3) {
+  } else if (percentage < 20) {
     color = "red";
   }
   return color;
