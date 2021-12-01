@@ -69,8 +69,8 @@ function calculateBeers(foobarData){
                 beerCount[9].amount+= order.order.filter(order => order == "Ruined Childhood").length;
             };
         }
-        console.log(beerCount);
-        console.log(sorted);
+        // console.log(beerCount);
+        // console.log(sorted);
         // Kalder functionen sort by
         sortBy();
 
