@@ -9,7 +9,7 @@ export function showTaps(foobarData, beerData) {
       klon.querySelector(".tap_no").textContent = tap.id+1;
     //   klon.querySelector(".staff_img").src = `./images/${bartenders.name}.png`;
       klon.querySelector(".beer_name").textContent = tap.beer;
-      klon.querySelector(".beer_name").textContent = getPercentage(tap);
+      klon.querySelector(".level").textContent = getPercentage(tap);
       klon.querySelector(".alcohol").textContent = getAlcohol(beerData, tap);
       klon.querySelector(".beer_type").textContent = getType(beerData, tap);
       tapsHolder.appendChild(klon);
