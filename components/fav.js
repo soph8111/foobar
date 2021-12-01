@@ -87,7 +87,6 @@ function sortBy(){
 }
 
 function changeName(name){
-    console.log(name);
    let newName = name.split(" ");
     newName = newName.join("");
     return newName.toLowerCase();
