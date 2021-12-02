@@ -9,6 +9,7 @@
   display: flex;
   gap: 8px;
   align-items: center;
+  margin-left: 12px;
 }
 
 .sales {
@@ -23,4 +24,15 @@
   padding: 12px 8px 12px 8px;
   gap: 35px;
   border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+  .sales {
+    grid-template-columns: 450px 1fr;
+  }
+}
+@media (min-width: 1080px) {
+  .sales {
+    grid-template-columns: 190px 1fr;
+  }
 }

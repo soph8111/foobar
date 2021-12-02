@@ -1,8 +1,8 @@
 /* MOBILVERSION */
 .guideline_wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 160px 2fr 1fr;
   align-items: center;
-  justify-content: space-between;
   margin-left: 10px;
   margin-right: 10px;
 }
