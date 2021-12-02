@@ -19,5 +19,13 @@
 @media (min-width: 1080px) {
   #taps_wrapper {
     display: flex;
+
+    article {
+      grid-template-rows: 0.5fr 1fr 1fr;
+    }
+
+    .tap_info {
+      align-self: start;
+    }
   }
 }
