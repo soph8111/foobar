@@ -13,28 +13,28 @@ $base_font: "playfair_displayregular";
 h1 {
   font-size: 2rem;
   text-transform: uppercase;
-  color: colors.$color_on_font;
+  color: colors.$base_color;
 }
 
 h2 {
   font-size: 1.8rem;
-  color: colors.$color_on_font;
+  color: colors.$base_color;
 }
 
 h3 {
   font-size: 1.2rem;
-  color: colors.$color_on_font;
+  color: colors.$base_color;
 }
 
 h4 {
   font-size: 1rem;
-  color: colors.$color_on_font;
+  color: colors.$base_color;
 }
 
 p,
 li {
   font-size: 1rem;
-  color: colors.$color_on_font;
+  color: colors.$base_color;
 }
 
 $p_small: 0.8rem;
