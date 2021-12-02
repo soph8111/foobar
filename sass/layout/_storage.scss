@@ -1,9 +1,25 @@
+// Sophie
+
+/* MOBILVERSION */
+
 #storage_wrapper {
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin: 15px;
 }
 
-#storage_wrapper article {
-  border: 1px solid black;
-  text-align: center;
+/* TABLET */
+
+@media (min-width: 768px) {
+}
+
+/* DESKTOP */
+
+@media (min-width: 1080px) {
+  #storage_wrapper {
+    gap: 5px;
+    margin: 5px;
+  }
 }
