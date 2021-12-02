@@ -1,9 +1,23 @@
+/* MOBILVERSION */
+
 #taps_wrapper {
-  display: flex;
   text-align: center;
-  justify-content: space-evenly;
 }
 
-/* DONUT CHART */
+/* TABLET */
 
-// https://codepen.io/janverstr/pen/PvPoaV
+@media (min-width: 768px) {
+  #taps_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1080px) {
+  #taps_wrapper {
+    display: flex;
+  }
+}

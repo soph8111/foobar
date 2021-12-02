@@ -57,11 +57,11 @@ function setStrokeDash(percentage, tap) {
 }
 
 function setColor(percentage) {
-  let color = "green";
+  let color = "#405D30";
   if (percentage > 20 && percentage < 65) {
-    color = "orange";
+    color = "#9B4D1C";
   } else if (percentage < 20) {
-    color = "red";
+    color = "#6A251F";
   }
   return color;
 }
