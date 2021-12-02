@@ -1,4 +1,22 @@
-#orders_wrapper article {
-  display: flex;
-  align-items: center;
+/* MOBILVERSION */
+#orders_wrapper {
+  overflow-y: scroll;
+
+  article {
+    margin: 10px auto;
+  }
+}
+
+.queue {
+  text-align: right;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+}
+
+/* DESKTOP */
+
+@media (min-width: 1080px) {
 }
