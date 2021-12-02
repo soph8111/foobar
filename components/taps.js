@@ -7,10 +7,10 @@ export function showTaps(foobarData, beerData) {
   foobarData.forEach((tap) => {
     const klon = template.cloneNode(true);
     const percentage = getPercentage(tap);
-    klon.querySelector(".tap_no").textContent = tap.id + 1;
+    klon.querySelector(".tap_no").textContent = `Tap ${tap.id + 1}`;
     klon.querySelector(".beer_name").textContent = tap.beer;
     klon.querySelector(".level").textContent = `${percentage}%`;
-    klon.querySelector(".alcohol").textContent = getAlcohol(beerData, tap);
+    klon.querySelector(".alcohol").textContent = `${getAlcohol(beerData, tap)}%`;
     klon.querySelector(".beer_type").textContent = getType(beerData, tap);
     klon.querySelector(".donut-segment").setAttribute("stroke-dasharray", setStrokeDash(percentage, tap));
     klon.querySelector(".donut-segment").setAttribute("stroke", setColor(percentage));

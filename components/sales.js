@@ -3,7 +3,7 @@
 export function showSales(foobarData){
     document.querySelector("#customer_amount").textContent = calculateCustomers(foobarData);
     document.querySelector("#beers_amount").textContent = customerCount.beerCount;
-    document.querySelector("#money_amount").textContent = calculateMoney();
+    document.querySelector("#money_amount").textContent = `${calculateMoney()},-`;
 }
 
 // Tomt array til at tælle kunder og øl
