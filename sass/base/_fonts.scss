@@ -13,7 +13,10 @@ $base_font: "playfair_displayregular";
 h1 {
   font-size: 2rem;
   text-transform: uppercase;
-  color: colors.$base_color;
+  color: colors.$baggrundcolor;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: colors.$base_color;
+  letter-spacing: 3px;
 }
 
 h2 {
@@ -38,11 +41,3 @@ li {
 }
 
 $p_small: 0.8rem;
-
-//Dette er bare lige et stk. kode til at lave outlined på font
-/*
-color: white;
-font-size: 50px;
--webkit-text-stroke-width: 1px;
--webkit-text-stroke-color: black;
-*/
