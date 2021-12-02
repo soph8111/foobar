@@ -1,0 +1,26 @@
+@use "../base/colors";
+/* MOBILVERSION */
+.value {
+  grid-area: value;
+  text-align: center;
+}
+.number_and_icon {
+  grid-area: number_and_icon;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.sales {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "number_and_icon value";
+  align-items: center;
+  background-color: colors.$baggrundscolor_on_components;
+  border: colors.$border_color_on_components solid 2px;
+  margin: 10px auto;
+  padding: 8px;
+  gap: 35px;
+  border-radius: 20px;
+}
