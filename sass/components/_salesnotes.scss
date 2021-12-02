@@ -2,7 +2,7 @@
 /* MOBILVERSION */
 .value {
   grid-area: value;
-  text-align: center;
+  //   text-align: center;
 }
 .number_and_icon {
   grid-area: number_and_icon;
@@ -20,7 +20,7 @@
   background-color: colors.$baggrundscolor_on_components;
   border: colors.$border_color_on_components solid 2px;
   margin: 10px auto;
-  padding: 8px;
+  padding: 12px 8px 12px 8px;
   gap: 35px;
   border-radius: 20px;
 }
