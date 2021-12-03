@@ -47,8 +47,9 @@
       grid-template-columns: 1fr;
       place-items: center;
       margin: 0;
+      padding: 20px;
       .donut-chart {
-        width: 65%;
+        width: 60%;
       }
     }
     .tap_info {
@@ -60,4 +61,9 @@
 /* DESKTOP */
 
 @media (min-width: 1080px) {
+  #taps_wrapper {
+    article {
+      padding: 0px;
+    }
+  }
 }
