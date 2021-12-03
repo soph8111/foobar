@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 10px 30px;
+    //gap: 10px 30px;
     margin: 15px 7px 15px 7px;
 
     h3 {
@@ -41,7 +41,7 @@
       display: grid;
       grid-template-columns: 1fr;
       place-items: center;
-
+      margin: 0;
       .donut-chart {
         width: 65%;
       }

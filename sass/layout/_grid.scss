@@ -17,10 +17,13 @@ body {
 // Grid for hele dashboardet
 #orders {
   grid-area: orders;
+  overflow: scroll;
 }
 
 #favorites {
   grid-area: favorites;
+  display: grid;
+  align-content: center;
 }
 
 #staff {
@@ -52,7 +55,7 @@ legend {
 /* DESKTOP */
 
 @media (min-width: 1080px) {
-  main {
+  /*   main {
     display: grid;
     grid-template-columns: 0.8fr 1fr 1fr;
     grid-gap: 20px;
@@ -64,5 +67,27 @@ legend {
       "sales kegs kegs"
       "sales storage storage"
       "sales storage storage";
+  } */
+
+  main {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr;
+    grid-gap: 1vh 1.2vw;
+    grid-template-rows: 40vh 30vh 24vh;
+    grid-template-areas:
+      "orders favorites staff"
+      "sales kegs kegs"
+      "storage storage storage";
   }
+
+  /*   main {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr;
+    grid-gap: 1vh 1.2vw;
+    grid-template-rows: 40vh 30vh 24vh;
+    grid-template-areas:
+      "orders staff favorites"
+      "sales kegs kegs"
+      "storage storage storage";
+  } */
 }

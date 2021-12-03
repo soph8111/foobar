@@ -5,31 +5,48 @@
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   margin: auto;
-  width: 330px;
 
-  #number1 {
+  span {
+    text-align: -webkit-center;
+  }
+
+  #span1 {
     position: relative;
     text-align: center;
     max-width: 90px;
   }
 
-  #number2 {
+  #span2 {
     position: relative;
     text-align: center;
     top: 40px;
     max-width: 90px;
   }
 
-  #number3 {
+  #span3 {
     position: relative;
     text-align: center;
     top: 75px;
     max-width: 90px;
   }
+
+  img {
+    width: 70%;
+    margin-top: 10px;
+  }
+}
+
+#fav_wrapper {
+  svg {
+    width: 100%;
+  }
 }
 /* TABLET */
 
 @media (min-width: 768px) {
+  #fav_title {
+    width: 330px;
+  }
 }
 
 /* DESKTOP */
@@ -40,6 +57,6 @@
   }
 
   #number3 {
-    top: 55px;
+    top: 60px;
   }
 }
