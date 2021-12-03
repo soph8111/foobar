@@ -69,7 +69,7 @@ legend {
       "sales storage storage";
   } */
 
-  main {
+  /*   main {
     display: grid;
     grid-template-columns: 0.8fr 1fr 1fr;
     grid-gap: 1vh 1.2vw;
@@ -78,9 +78,9 @@ legend {
       "orders favorites staff"
       "sales kegs kegs"
       "storage storage storage";
-  }
+  } */
 
-  /*   main {
+  main {
     display: grid;
     grid-template-columns: 0.8fr 1fr 1fr;
     grid-gap: 1vh 1.2vw;
@@ -89,5 +89,5 @@ legend {
       "orders staff favorites"
       "sales kegs kegs"
       "storage storage storage";
-  } */
+  }
 }
