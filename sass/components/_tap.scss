@@ -30,6 +30,11 @@
   .tap_info {
     text-align: left;
     line-height: 1.3rem;
+
+    .alcohol,
+    .beer_type {
+      font-size: fonts.$p_small;
+    }
   }
 }
 

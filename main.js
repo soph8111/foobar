@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", start);
 function start() {
   // console.log("start");
   loadJSON();
-  setInterval(loadJSON, 10000);
+  //setInterval(loadJSON, 10000);
 }
 
 // let foobarUrl = "https://the-three-must-get-beers.herokuapp.com/";
