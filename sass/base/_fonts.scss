@@ -1,4 +1,5 @@
 @use "colors";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 @font-face {
   font-family: "playfair_displayregular";
@@ -10,34 +11,52 @@
 $base_font: "playfair_displayregular";
 
 // FONT SIZES
+
+#foobar {
+  text-align: center;
+  font-size: 3em;
+  border-bottom: 3px solid colors.$base_color;
+  width: 70vw;
+  margin: 10vw auto;
+  -webkit-text-stroke-width: 1.5px;
+}
+
 h1 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-transform: uppercase;
   color: colors.$baggrundcolor;
   -webkit-text-stroke-width: 0.8px;
   -webkit-text-stroke-color: colors.$base_color;
   letter-spacing: 3px;
+  margin: 5px;
 }
 
 h2 {
+  font-family: $base_font;
+  font-weight: 400;
   font-size: 1.5rem;
   color: colors.$base_color;
 }
 
 h3 {
+  font-family: $base_font;
+  font-weight: 400;
   font-size: 1.2rem;
   color: colors.$base_color;
 }
 
 h4 {
-  font-size: 1rem;
+  font-family: $base_font;
+  font-weight: 400;
+  font-size: 1.1rem;
   color: colors.$base_color;
 }
 
 p,
 li {
-  font-size: 1rem;
+  font-family: $base_font;
+  font-size: 1.1rem;
   color: colors.$base_color;
 }
 
-$p_small: 0.8rem;
+$p_small: 0.9rem;

@@ -19,7 +19,7 @@
 
 .sales {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
   grid-template-areas: "number_and_icon value";
   align-items: center;
@@ -34,7 +34,4 @@
 @media (min-width: 768px) {
 }
 @media (min-width: 1080px) {
-  .sales {
-    grid-template-columns: 1fr 2fr;
-  }
 }

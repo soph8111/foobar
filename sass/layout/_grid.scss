@@ -48,6 +48,7 @@ body {
 
 fieldset {
   border: 3px solid colors.$base_color;
+  margin-bottom: 10vw;
 }
 
 legend {
@@ -59,6 +60,14 @@ legend {
 @media (min-width: 768px) {
   .hide {
     display: block;
+  }
+
+  #foobar {
+    display: none;
+  }
+
+  fieldset {
+    margin-bottom: 0;
   }
 }
 
