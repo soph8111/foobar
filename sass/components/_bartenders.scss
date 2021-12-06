@@ -16,7 +16,7 @@
 
 #staff_wrapper article {
   display: grid;
-  grid-template-columns: 130px 1fr 1fr;
+  grid-template-columns: 110px 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "each_staff status serving_no";
   border: colors.$border_color_on_components solid 2px;
@@ -40,6 +40,9 @@ img.staff_img {
 @media (min-width: 768px) {
   img.staff_img {
     max-width: 8vw;
+  }
+  #staff_wrapper article {
+    grid-template-columns: 157px 1fr 1fr;
   }
 }
 
