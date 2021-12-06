@@ -1,5 +1,9 @@
 @use "../base/colors";
 
+.hide {
+  display: none;
+}
+
 /* MOBILVERSION */
 * {
   box-sizing: border-box;
@@ -51,6 +55,12 @@ legend {
 }
 
 /* TABLET */
+
+@media (min-width: 768px) {
+  .hide {
+    display: block;
+  }
+}
 
 /* DESKTOP */
 
