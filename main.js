@@ -6,6 +6,7 @@ import { showStorage } from "./components/storage.js";
 import { showSales } from "./components/sales.js";
 import { showTaps } from "./components/taps.js";
 import { showFav } from "./components/fav.js";
+import { showMobile } from "./components/mobile.js";
 
 window.addEventListener("DOMContentLoaded", start);
 
@@ -14,7 +15,8 @@ window.addEventListener("DOMContentLoaded", start);
 function start() {
   // console.log("start");
   loadJSON();
-  //setInterval(loadJSON, 10000);
+  setInterval(loadJSON, 10000);
+  showMobile();
 }
 
 // let foobarUrl = "https://the-three-must-get-beers.herokuapp.com/";
