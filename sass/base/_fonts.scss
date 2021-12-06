@@ -8,6 +8,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "bordonaro_spur";
+  src: url("../fonts/bordonaro_spur-webfont.woff2") format("woff2"), url("../fonts/bordonaro_spur-webfont.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+$second_font: "bordonaro_spur";
+
 $base_font: "playfair_displayregular";
 
 // FONT SIZES
@@ -22,6 +31,7 @@ $base_font: "playfair_displayregular";
 }
 
 h1 {
+  font-family: $base_font;
   font-size: 2rem;
   text-transform: uppercase;
   color: colors.$baggrundcolor;
@@ -32,21 +42,24 @@ h1 {
 }
 
 h2 {
-  font-family: $base_font;
+  font-family: $second_font;
+  letter-spacing: 2px;
   font-weight: 400;
   font-size: 1.5rem;
   color: colors.$base_color;
 }
 
 h3 {
-  font-family: $base_font;
+  font-family: $second_font;
+  letter-spacing: 2px;
   font-weight: 400;
   font-size: 1.2rem;
   color: colors.$base_color;
 }
 
 h4 {
-  font-family: $base_font;
+  font-family: $second_font;
+  letter-spacing: 2px;
   font-weight: 400;
   font-size: 1.1rem;
   color: colors.$base_color;
@@ -54,7 +67,8 @@ h4 {
 
 p,
 li {
-  font-family: $base_font;
+  font-family: $second_font;
+  letter-spacing: 2px;
   font-size: 1.1rem;
   color: colors.$base_color;
 }
