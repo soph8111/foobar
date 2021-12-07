@@ -1,9 +1,14 @@
+@use "../base/colors";
+
 /* MOBILVERSION */
 #fav_wrapper {
   svg {
     margin: 0 auto;
     // display: block;
   }
+  // path {
+  //   fill: colors.$baggrundscolor_on_components;
+  // }
 }
 
 /* TABLET */

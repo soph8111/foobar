@@ -1,1 +1,9 @@
+@use "../base/colors";
+
 // Light vs. dark theme
+.theme2 {
+  border: 2px solid colors.$baggrundscolor_on_components;
+  background-color: colors.$baggrundscolor_on_components;
+  border-radius: 50px;
+  fill: colors.$baggrundcolor;
+}

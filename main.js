@@ -7,6 +7,7 @@ import { showSales } from "./components/sales.js";
 import { showTaps } from "./components/taps.js";
 import { showFav } from "./components/fav.js";
 import { showMobile } from "./components/mobile.js";
+import toggleTheme from "./components/theme"
 
 window.addEventListener("DOMContentLoaded", start);
 
@@ -15,8 +16,9 @@ window.addEventListener("DOMContentLoaded", start);
 function start() {
   // console.log("start");
   loadJSON();
-  setInterval(loadJSON, 10000);
+  // setInterval(loadJSON, 10000);
   showMobile();
+  toggleTheme();
 }
 
 // let foobarUrl = "https://the-three-must-get-beers.herokuapp.com/";
