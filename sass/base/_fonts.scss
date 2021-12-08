@@ -31,7 +31,7 @@ $base_font: "playfair_displayregular";
 }
 
 h1 {
-  font-family: $base_font;
+  font-family: var(--h1-font);
   font-size: 2rem;
   text-transform: uppercase;
   color: var(--h1-fill);
@@ -42,35 +42,39 @@ h1 {
 }
 
 h2 {
-  font-family: $second_font;
-  letter-spacing: 2px;
+  font-family: var(--font);
+  // letter-spacing: 2px;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--font-color);
 }
 
 h3 {
-  font-family: $second_font;
-  letter-spacing: 2px;
+  font-family: var(--font);
+  // letter-spacing: 2px;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--font-color);
 }
 
 h4 {
-  font-family: $second_font;
-  letter-spacing: 2px;
+  font-family: var(--font);
+  // letter-spacing: 2px;
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--font-color);
 }
 
 p,
 li {
-  font-family: $second_font;
-  letter-spacing: 2px;
-  font-size: 1.1rem;
+  font-family: var(--font);
+  // letter-spacing: 2px;
+  font-size: 1rem;
   color: var(--font-color);
 }
 
 $p_small: 0.9rem;
+
+tspan {
+  font-family: var(--font);
+}

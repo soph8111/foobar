@@ -110,7 +110,7 @@ legend {
   main {
     display: grid;
     grid-template-columns: 0.8fr 1fr 1fr;
-    grid-gap: 1vh 1.2vw;
+    grid-gap: 0 1.2vw;
     grid-template-rows: 40vh 30vh 24vh;
     grid-template-areas:
       "orders staff favorites"

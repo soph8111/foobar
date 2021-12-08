@@ -9,13 +9,13 @@
   border: 2px solid var(--component-border);
   border-radius: 25px;
   text-align: center;
-  width: 120px;
-  height: 17vh;
+  height: 180px;
   background-color: var(--color-component);
   display: grid;
-  align-content: center;
+  grid-template-rows: 35px 2fr 1fr;
+  gap: 10px;
+  align-items: center;
   justify-items: center;
-  align-content: space-around;
   padding: 10px;
 
   img {
@@ -32,9 +32,9 @@
 
 @media (min-width: 1080px) {
   #storage_wrapper article {
-    width: 95px;
-    grid-template-rows: 2fr 2fr 1fr;
-    justify-content: center;
-    align-items: center;
+    // height: 180px;
+    height: 170px;
+    max-width: 130px;
+    grid-template-rows: 30px 80px 10px;
   }
 }

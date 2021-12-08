@@ -36,7 +36,7 @@ input:checked + label:after {
 }
 
 input:checked + label {
-  background-color: #243d42;
+  background-color: colors.$baggrundcolor;
 }
 
 /* TABLET */
