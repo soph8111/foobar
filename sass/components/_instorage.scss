@@ -6,12 +6,12 @@
 /* MOBILVERSION */
 
 #storage_wrapper article {
-  border: 2px solid colors.$border_color_on_components;
+  border: 2px solid var(--component-border);
   border-radius: 25px;
   text-align: center;
   width: 120px;
   height: 17vh;
-  background-color: colors.$baggrundscolor_on_components;
+  background-color: var(--color-component);
   display: grid;
   align-content: center;
   justify-items: center;

@@ -1,4 +1,5 @@
-@use "../base/colors";
+// @use "../base/colors";
+@use "../themes/index";
 
 .hide {
   display: none;
@@ -15,7 +16,12 @@ html {
 }
 
 body {
-  background-color: colors.$baggrundcolor;
+  background-color: var(--color-background);
+}
+
+header {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 // Grid for hele dashboardet
@@ -47,8 +53,10 @@ body {
 }
 
 fieldset {
-  border: 3px solid colors.$base_color;
-  margin-bottom: 10vw;
+  border: 3px solid var(--color-fieldset-border);
+  background-color: var(--color-fieldset);
+  margin-bottom: 30px;
+  border-radius: var(--border-radius);
 }
 
 legend {

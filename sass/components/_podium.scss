@@ -4,12 +4,17 @@
 #fav_wrapper {
   svg {
     margin: 0 auto;
+    fill: var(--color-component);
     // display: block;
+    tspan {
+      fill: var(--font-color);
+    }
   }
-  // path {
-  //   fill: colors.$baggrundscolor_on_components;
-  // }
 }
+
+// path {
+//   fill: colors.$baggrundscolor_on_components;
+// }
 
 /* TABLET */
 

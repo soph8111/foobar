@@ -1,9 +1,20 @@
 "use strict";
 
-export default function toggleTheme(){
-    document.querySelector("input[type=checkbox]").addEventListener("change", e => {
-        console.log("hello");
-        document.querySelectorAll("fieldset").forEach(field => field.classList.toggle("theme2"));
-        document.querySelectorAll("#Group-177 path").forEach(path => path.classList.toggle("theme2"));
-    });
+//Vælger temaet efter slider
+export function theme(){
+    setTheme('theme-blue');
+        document.querySelector("input[type=checkbox]").addEventListener("change", e => {
+            if (localStorage.getItem('theme') === 'theme-blue') {
+                        setTheme('theme-light');
+                    } else {
+                        setTheme('theme-blue');
+                    }
+        });
+    }
+
+// Sætter temaet
+function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+    console.log(themeName);
 }

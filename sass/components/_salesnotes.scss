@@ -15,6 +15,7 @@
   gap: 8px;
   align-items: center;
   margin-left: 12px;
+  fill: var(--font-color);
 }
 
 .sales {
@@ -23,8 +24,8 @@
   grid-template-rows: auto;
   grid-template-areas: "number_and_icon value";
   align-items: center;
-  background-color: colors.$baggrundscolor_on_components;
-  border: colors.$border_color_on_components solid 2px;
+  background-color: var(--color-component);
+  border: var(--component-border) solid 2px;
   margin: 10px auto;
   padding: 12px 8px 12px 8px;
   gap: 35px;

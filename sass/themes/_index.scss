@@ -1,9 +1,23 @@
-@use "../base/colors";
+.theme-blue {
+  --color-background: #0c1618;
+  --color-fieldset-border: #c6ad5d;
+  --color-fieldset: #0c1618;
+  --color-component: #112026;
+  --component-border: #674b25;
+  --font-color: #c6ad5d;
+  --h1-fill: #0c1618;
+  --h1-border: #c6ad5d;
+  --border-radius: 0;
+}
 
-// Light vs. dark theme
-.theme2 {
-  border: 2px solid colors.$baggrundscolor_on_components;
-  background-color: colors.$baggrundscolor_on_components;
-  border-radius: 50px;
-  fill: colors.$baggrundcolor;
+.theme-light {
+  --color-background: #e8eded;
+  --color-fieldset-border: #899ca4;
+  --color-fieldset: #899ca4;
+  --color-component: #c6d2e0;
+  --component-border: #c6d2e0;
+  --font-color: #28313b;
+  --h1-fill: #28313b;
+  --h1-border: #28313b;
+  --border-radius: 50px;
 }

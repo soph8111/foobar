@@ -19,7 +19,7 @@ export function showOrders(foobarData) {
 function createBeerList(beersOnOrder) {
   let list = document.createElement("ul");
 
-  console.log(beersOnOrder);
+  // console.log(beersOnOrder);
 
   const newArray = [];
   const moreThanOne = [];
