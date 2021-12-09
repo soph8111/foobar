@@ -19,6 +19,7 @@
 @media (min-width: 1080px) {
   #taps_wrapper {
     display: flex;
+    margin-top: -10px;
 
     article {
       grid-template-rows: 0.5fr 1fr 1fr;

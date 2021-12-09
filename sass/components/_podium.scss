@@ -1,10 +1,20 @@
+@use "../base/colors";
+
 /* MOBILVERSION */
 #fav_wrapper {
   svg {
     margin: 0 auto;
-    display: block;
+    fill: var(--color-component);
+    // display: block;
+    tspan {
+      fill: var(--font-color);
+    }
   }
 }
+
+// path {
+//   fill: colors.$baggrundscolor_on_components;
+// }
 
 /* TABLET */
 

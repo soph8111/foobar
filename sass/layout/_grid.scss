@@ -1,4 +1,9 @@
-@use "../base/colors";
+// @use "../base/colors";
+@use "../themes/index";
+
+.hide {
+  display: none;
+}
 
 /* MOBILVERSION */
 * {
@@ -11,7 +16,12 @@ html {
 }
 
 body {
-  background-color: colors.$baggrundcolor;
+  background-color: var(--color-background);
+}
+
+header {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 // Grid for hele dashboardet
@@ -43,7 +53,10 @@ body {
 }
 
 fieldset {
-  border: 3px solid colors.$base_color;
+  border: 3px solid var(--color-fieldset-border);
+  background-color: var(--color-fieldset);
+  margin-bottom: 30px;
+  border-radius: var(--border-radius);
 }
 
 legend {
@@ -51,6 +64,20 @@ legend {
 }
 
 /* TABLET */
+
+@media (min-width: 768px) {
+  .hide {
+    display: block;
+  }
+
+  #foobar {
+    display: none;
+  }
+
+  fieldset {
+    margin-bottom: 0;
+  }
+}
 
 /* DESKTOP */
 
@@ -83,7 +110,7 @@ legend {
   main {
     display: grid;
     grid-template-columns: 0.8fr 1fr 1fr;
-    grid-gap: 1vh 1.2vw;
+    grid-gap: 0 1.2vw;
     grid-template-rows: 40vh 30vh 24vh;
     grid-template-areas:
       "orders staff favorites"

@@ -1,1 +1,36 @@
-// Light vs. dark theme
+.theme-blue {
+  --color-background: #0c1618;
+  --color-fieldset-border: #c6ad5d;
+  --color-fieldset: #0c1618;
+  --color-component: #112026;
+  --component-border: #674b25;
+  --font: "Montserrat";
+  --font-color: #c6ad5d;
+  --h1-font: "playfair_displayregular";
+  --h1-fill: #0c1618;
+  --h1-border: #c6ad5d;
+  --border-radius: 0;
+}
+
+.theme-light {
+  --color-background: #b2c8c8;
+  --color-fieldset-border: #1a464400;
+  --color-fieldset: #1a46443f;
+  --color-component: #1a46443f;
+  --component-border: #1a464400;
+  --h1-font: "Montserrat";
+  --font: "Montserrat";
+  --font-color: #0c1618;
+  --h1-fill: #0c1618;
+  --h1-border: #0c1618;
+  --border-radius: 50px;
+}
+
+@font-face {
+  font-family: "playfair_displayregular";
+  src: url("../fonts/playfairdisplay-variablefont_wght-webfont.woff2") format("woff2"), url("../fonts/playfairdisplay-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");

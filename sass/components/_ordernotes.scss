@@ -6,8 +6,8 @@
   grid-template-columns: 1.5fr 2fr;
   grid-gap: 10px;
   align-items: center;
-  background-color: colors.$baggrundscolor_on_components;
-  border: 2px solid colors.$border_color_on_components;
+  background-color: var(--color-component);
+  border: 2px solid var(--component-border);
   border-radius: 20px;
   padding: 1rem;
 

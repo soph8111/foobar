@@ -6,7 +6,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 20px;
-  justify-items: center;
   margin: 15px;
 }
 
@@ -20,6 +19,6 @@
 @media (min-width: 1080px) {
   #storage_wrapper {
     gap: 2px;
-    margin: 5px;
+    margin: 0;
   }
 }

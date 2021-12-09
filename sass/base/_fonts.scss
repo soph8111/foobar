@@ -1,49 +1,82 @@
 @use "colors";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=News+Cycle&display=swap");
 
 @font-face {
   font-family: "playfair_displayregular";
-  src: url("playfairdisplay-variablefont_wght-webfont.woff2") format("woff2"), url("playfairdisplay-variablefont_wght-webfont.woff") format("woff");
+  src: url("../fonts/playfairdisplay-variablefont_wght-webfont.woff2") format("woff2"), url("../fonts/playfairdisplay-variablefont_wght-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
-$base_font: "News Cycle", sans-serif;
+@font-face {
+  font-family: "bordonaro_spur";
+  src: url("../fonts/bordonaro_spur-webfont.woff2") format("woff2"), url("../fonts/bordonaro_spur-webfont.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+$second_font: "bordonaro_spur";
+
+$base_font: "playfair_displayregular";
 
 // FONT SIZES
+
+#foobar {
+  text-align: center;
+  font-size: 3em;
+  border-bottom: 3px solid var(--h1-border);
+  width: 70vw;
+  margin: 30px auto;
+  -webkit-text-stroke-width: 1.5px;
+}
+
 h1 {
-  font-size: 1.6rem;
+  font-family: var(--h1-font);
+  font-size: 2rem;
   text-transform: uppercase;
-  color: colors.$baggrundcolor;
+  color: var(--h1-fill);
   -webkit-text-stroke-width: 0.8px;
-  -webkit-text-stroke-color: colors.$base_color;
+  -webkit-text-stroke-color: var(--h1-border);
   letter-spacing: 3px;
+  margin: 5px;
 }
 
 h2 {
-  font-size: 1.5rem;
-  color: colors.$base_color;
-  font-family: $base_font;
+  font-family: var(--font);
+  // letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--font-color);
 }
 
 h3 {
-  font-size: 1.2rem;
-  color: colors.$base_color;
-  font-family: $base_font;
+  font-family: var(--font);
+  // letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--font-color);
 }
 
 h4 {
+  font-family: var(--font);
+  // letter-spacing: 2px;
+  font-weight: 400;
   font-size: 1rem;
-  color: colors.$base_color;
-  font-family: $base_font;
+  color: var(--font-color);
 }
 
 p,
 li {
+  font-family: var(--font);
+  // letter-spacing: 2px;
   font-size: 1rem;
-  font-family: $base_font;
-  color: colors.$base_color;
+  color: var(--font-color);
 }
 
-$p_small: 0.8rem;
+$p_small: 0.9rem;
+
+tspan {
+  font-family: var(--font);
+}
