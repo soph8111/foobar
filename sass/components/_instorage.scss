@@ -9,7 +9,8 @@
   border: 2px solid var(--component-border);
   border-radius: 25px;
   text-align: center;
-  height: 180px;
+  // height: 180px;
+  height: 22vh;
   background-color: var(--color-component);
   display: grid;
   grid-template-rows: 35px 2fr 1fr;
@@ -33,8 +34,8 @@
 @media (min-width: 1080px) {
   #storage_wrapper article {
     // height: 180px;
-    height: 170px;
+    height: 17vh;
     max-width: 130px;
-    grid-template-rows: 30px 80px 10px;
+    grid-template-rows: 20% 8vh 20%;
   }
 }
