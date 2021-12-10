@@ -1,7 +1,6 @@
 @use "colors";
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=News+Cycle&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 @font-face {
   font-family: "playfair_displayregular";
@@ -10,16 +9,8 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "bordonaro_spur";
-  src: url("../fonts/bordonaro_spur-webfont.woff2") format("woff2"), url("../fonts/bordonaro_spur-webfont.woff") format("woff");
-  font-weight: lighter;
-  font-style: normal;
-}
-
-$second_font: "bordonaro_spur";
-
-$base_font: "playfair_displayregular";
+$base_font: "Montserrat";
+$headline: "playfair_displayregular";
 
 // FONT SIZES
 

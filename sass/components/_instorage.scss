@@ -20,14 +20,16 @@
   padding: 10px;
 
   img {
-    width: 4vw;
-    max-width: 60%;
+    width: 18vw;
   }
 }
 
 /* TABLET */
 
 @media (min-width: 768px) {
+  #storage_wrapper article img {
+    width: 10vw;
+  }
 }
 
 /* DESKTOP */
@@ -38,5 +40,10 @@
     height: 16vh;
     max-width: 130px;
     grid-template-rows: 20% 8vh 10%;
+
+    img {
+      width: 4vw;
+      max-width: 60%;
+    }
   }
 }
