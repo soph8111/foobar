@@ -15,7 +15,7 @@ function start() {
   // console.log("start");
   loadJSON();
   // setInterval(loadJSON, 2000);
-  showMobile();
+  // showMobile();
   theme();
 }
 
