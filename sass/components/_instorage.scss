@@ -20,7 +20,8 @@
   padding: 10px;
 
   img {
-    width: 60%;
+    width: 4vw;
+    max-width: 60%;
   }
 }
 
@@ -34,8 +35,8 @@
 @media (min-width: 1080px) {
   #storage_wrapper article {
     // height: 180px;
-    height: 17vh;
+    height: 16vh;
     max-width: 130px;
-    grid-template-rows: 20% 8vh 20%;
+    grid-template-rows: 20% 8vh 10%;
   }
 }
