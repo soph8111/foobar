@@ -20,7 +20,7 @@ const sorted = beerCount.slice();
 export function showFav(foobarData) {
   calculateBeers(foobarData);
   document.querySelector("#number1").textContent = sorted[0].name;
-  document.querySelector("#img1").setAttribute("src", `../images/${changeName(sorted[0].name)}.png`);
+  document.querySelector("#img1").setAttribute("src", `./images/${changeName(sorted[0].name)}.png`);
   document.querySelector("#number2").textContent = sorted[1].name;
   document.querySelector("#img2").setAttribute("src", `./images/${changeName(sorted[1].name)}.png`);
   document.querySelector("#number3").textContent = sorted[2].name;
