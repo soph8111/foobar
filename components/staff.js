@@ -1,3 +1,4 @@
+// Caroline
 "use strict";
 export function showStaff(foobarData) {
     // console.log(foobarData);
@@ -17,7 +18,6 @@ export function showStaff(foobarData) {
 
   // Ændre farven til grøn hvis bartender er READY
   function readyOrNot(status){
-    // console.log(status);
     if(status === "READY"){
         status = "green";
     } 
