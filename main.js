@@ -14,9 +14,8 @@ window.addEventListener("DOMContentLoaded", start);
 function start() {
   // console.log("start");
   loadJSON();
-  // showMobile();
   setInterval(loadJSON, 2000);
-  showMobile();
+  // showMobile();
   theme();
 }
 
