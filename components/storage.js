@@ -1,3 +1,4 @@
+// Caroline
 "use strict";
 
 export function showStorage(foobarData){
@@ -14,10 +15,9 @@ export function showStorage(foobarData){
      });
 }
 
+//Funktion der ændrer navnet til ikke at indeholde mellemrum, så det kan bruges til at finde det matchende billede
 function changeName(name){
   let newName = name.split(" ");
   newName = newName.join("");
   return newName.toLowerCase();
 }
-
-// Billeder på øl
