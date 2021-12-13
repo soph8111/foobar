@@ -19,30 +19,23 @@ export function showOrders(foobarData) {
 function createBeerList(beersOnOrder) {
   let list = document.createElement("ul");
 
-  // console.log(beersOnOrder);
-
   const newArray = [];
   const moreThanOne = [];
 
   beersOnOrder.forEach((beer) => {
     const numbersOfBeers = countNumbersOfBeers(beersOnOrder, beer);
-    // console.log(numbersOfBeers);
     if (numbersOfBeers.includes("1")) {
-      // console.log(numbersOfBeers);
       newArray.push(numbersOfBeers);
     } else if (!numbersOfBeers.includes("1")) {
-      // console.log(numbersOfBeers);
       moreThanOne.push(numbersOfBeers);
     }
   });
 
   if (moreThanOne.length > 0) {
-    //console.log(moreThanOne[moreThanOne.length - 1]);
     newArray.push(moreThanOne[moreThanOne.length - 1]);
   }
 
   newArray.forEach((beer) => {
-    //console.log(beer)
     const li = document.createElement("li");
 
     li.append(beer);

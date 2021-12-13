@@ -7,14 +7,14 @@ import { showSales } from "./components/sales.js";
 import { showTaps } from "./components/taps.js";
 import { showFav } from "./components/fav.js";
 import { showMobile } from "./components/mobile.js";
-import {theme} from "./components/theme";
+import { theme } from "./components/theme";
 
 window.addEventListener("DOMContentLoaded", start);
 
 function start() {
   // console.log("start");
   loadJSON();
-  // setInterval(loadJSON, 2000);
+  setInterval(loadJSON, 2000);
   showMobile();
   theme();
 }
