@@ -9,7 +9,7 @@ export function showStorage(foobarData){
      foobarData.forEach((storage) => {
        const klon = template.cloneNode(true);
        klon.querySelector(".storage_name").textContent = storage.name;
-       klon.querySelector(".storage_img").src = `./images/${changeName(storage.name)}.png`;
+       klon.querySelector(".storage_img").src = `./images/${changeName(storage.name)}.webp`;
        klon.querySelector(".storage_amount").textContent = storage.amount;
        storageHolder.appendChild(klon);
      });
