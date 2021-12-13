@@ -1,7 +1,10 @@
+// Caroline
 "use strict";
 
+//Tomt array til at lægge alle "nye" ordre i, så vi kan tjekke om de har været kørt før
 const orderArray = [];
 
+//Array til at tælle op på hvor mange gang den enkelte slags øl er bestilt
 const beerCount = [
   { name: "GitHop", amount: 0 },
   { name: "Steampunk", amount: 0 },
@@ -15,27 +18,30 @@ const beerCount = [
   { name: "Ruined Childhood", amount: 0 },
 ];
 
+// Nyt array af beerCount, som vi kan sortere på (vi laver et nyt, så vi ikke piller ved rækkefølgen i det oprindelige, og dermed får pushet de øl de forkerte steder hen)
 const sorted = beerCount.slice();
 
+//Udskriver det relevante data
 export function showFav(foobarData) {
   calculateBeers(foobarData);
   document.querySelector("#number1").textContent = sorted[0].name;
-  document.querySelector("#img1").setAttribute("src", `./images/${changeName(sorted[0].name)}.png`);
+  document.querySelector("#img1").setAttribute("src", `./images/${changeName(sorted[0].name)}.webp`);
   document.querySelector("#number2").textContent = sorted[1].name;
-  document.querySelector("#img2").setAttribute("src", `./images/${changeName(sorted[1].name)}.png`);
+  document.querySelector("#img2").setAttribute("src", `./images/${changeName(sorted[1].name)}.webp`);
   document.querySelector("#number3").textContent = sorted[2].name;
-  document.querySelector("#img3").setAttribute("src", `./images/${changeName(sorted[2].name)}.png`);
+  document.querySelector("#img3").setAttribute("src", `./images/${changeName(sorted[2].name)}.webp`);
 }
 
+//Her udregnes hvor mange forskellige slags øl der er bestilt
 function calculateBeers(foobarData) {
   foobarData.forEach((order) => {
     //Sørger for kun at tælle customer 1 gang - hvis samme kunde stadig bliver serviceret når det fetches igen
     if (!orderArray.includes(order.id)) {
-      // Pusher customer id'et til arrayet, så vi kan tjekke at ordren ikke har været kørt før
+      // Pusher customer id'et til arrayet, hvis det ikke allerede findes i arrayet
       orderArray.push(order.id);
-      // Sætter tælleren på øllen til at være lig tallet før + længden af array med samme øl i
-      // console.log(order.order);
+      // Kun hvis den ikke har været kørt før tjekker vi hvilke øl ordren indeholder
       if (order.order.includes("GitHop")) {
+        // Sætter tælleren på øllen til at være lig tallet før + længden af array med samme øl i
         beerCount[0].amount += order.order.filter((order) => order == "GitHop").length;
       }
       if (order.order.includes("Steampunk")) {
@@ -66,8 +72,6 @@ function calculateBeers(foobarData) {
         beerCount[9].amount += order.order.filter((order) => order == "Ruined Childhood").length;
       }
     }
-    // console.log(beerCount);
-    // console.log(sorted);
     // Kalder functionen sort by
     sortBy();
   });
@@ -80,25 +84,10 @@ function sortBy() {
   });
 }
 
+//Her ændrer vi ordrens navn til ikke at indeholde mellemrum, sådan at vi kan bruge det til at finde det matchende billede
 function changeName(name) {
   let newName = name.split(" ");
   newName = newName.join("");
   return newName.toLowerCase();
 }
 
-// CODE - https://www.tutorialspoint.com/find-n-highest-values-in-an-object-javascript
-//     const pickHighest = (obj, num = 1) => {
-//         const requiredObj = {};
-//         if(num > Object.keys(obj).length){
-//            return false;
-//         };
-//         Object.keys(obj).sort((a, b) => obj[b] - obj[a]).forEach((key, ind) =>
-//         {
-//            if(ind < num){
-//               requiredObj[key] = obj[key];
-//            }
-//         });
-//         return requiredObj;
-//      };
-//      console.log(pickHighest(beerCount, 3));
-//      console.log(beerCount[0]); //returns 'someV

@@ -1,3 +1,4 @@
+// Caroline
 "use strict";
 
 export function showStorage(foobarData){
@@ -8,16 +9,15 @@ export function showStorage(foobarData){
      foobarData.forEach((storage) => {
        const klon = template.cloneNode(true);
        klon.querySelector(".storage_name").textContent = storage.name;
-       klon.querySelector(".storage_img").src = `./images/${changeName(storage.name)}.png`;
+       klon.querySelector(".storage_img").src = `./images/${changeName(storage.name)}.webp`;
        klon.querySelector(".storage_amount").textContent = storage.amount;
        storageHolder.appendChild(klon);
      });
 }
 
+//Funktion der ændrer navnet til ikke at indeholde mellemrum, så det kan bruges til at finde det matchende billede
 function changeName(name){
   let newName = name.split(" ");
   newName = newName.join("");
   return newName.toLowerCase();
 }
-
-// Billeder på øl
