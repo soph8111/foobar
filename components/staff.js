@@ -8,7 +8,7 @@ export function showStaff(foobarData) {
     foobarData.forEach((bartenders) => {
       const klon = template.cloneNode(true);
       klon.querySelector(".name").textContent = bartenders.name;
-      klon.querySelector(".staff_img").src = `./bartenders/${bartenders.name}.png`;
+      klon.querySelector(".staff_img").src = `./bartenders/${bartenders.name}.webp`;
       klon.querySelector(".ready").style.fill = readyOrNot(bartenders.status);
       klon.querySelector(".status").textContent = getStatus(bartenders.statusDetail);
       klon.querySelector(".serving_no").textContent = getOrderNo(bartenders.servingCustomer);
