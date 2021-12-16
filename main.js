@@ -1,3 +1,4 @@
+//Caroline, Sophie, Helena
 "use strict";
 // import "./style.scss";
 import { showStaff } from "./components/staff.js";
